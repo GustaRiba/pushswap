@@ -6,7 +6,7 @@
 /*   By: gmorais- <gmorais-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 11:39:04 by gmorais-          #+#    #+#             */
-/*   Updated: 2023/04/13 12:17:58 by gmorais-         ###   ########.fr       */
+/*   Updated: 2023/04/13 13:33:59 by gmorais-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ void	for_b(t_stack **stack_a, t_stack **stack_b, int size)
 		}
 		else if (c == chunk)
 		{
-			printf("c var: %d\n", c);
 			if (size > 100)
 				chunk += 30;
 			else
@@ -39,9 +38,6 @@ void	for_b(t_stack **stack_a, t_stack **stack_b, int size)
 			ate_topo_list(stack_a, check_index(stack_a, (*stack_a)->index));
 		}
 	}
-	
-	print_index(stack_b);
-	printf("\n");
 }
 
 int	put_in_a_2(t_stack **stack_a, t_stack **stack_b, int *big, int index)

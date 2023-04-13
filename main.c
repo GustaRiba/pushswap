@@ -6,7 +6,7 @@
 /*   By: gmorais- <gmorais-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 11:44:57 by gmorais-          #+#    #+#             */
-/*   Updated: 2023/04/11 17:17:30 by gmorais-         ###   ########.fr       */
+/*   Updated: 2023/04/13 13:37:14 by gmorais-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,9 @@ void	call_case(t_stack **a, t_stack **b)
 		alg_5(a, b);
 	if (size > 5 && size < 101)
 	{
-		printf("cccc\n");
 		get_index(a);
 		alg_100(a, b);
 	}
-	print_list(a);
 	/*if (argc >= 501)
 		alg_500(a, b);*/
 }
@@ -65,7 +63,6 @@ int	main(int argc, char **argv)
 	}
 	put_list(&a, argc, argv);
 	call_case(&a, &b);
-	sorted(&a);
 	ft_lstclear(&a);
 	ft_lstclear(&b);
 }
