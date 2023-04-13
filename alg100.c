@@ -6,7 +6,7 @@
 /*   By: gmorais- <gmorais-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 11:39:04 by gmorais-          #+#    #+#             */
-/*   Updated: 2023/04/11 18:51:19 by gmorais-         ###   ########.fr       */
+/*   Updated: 2023/04/13 12:17:58 by gmorais-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,16 +46,19 @@ void	for_b(t_stack **stack_a, t_stack **stack_b, int size)
 
 int	put_in_a_2(t_stack **stack_a, t_stack **stack_b, int *big, int index)
 {
-	if ((*stack_a) && (*stack_a)->next && (*stack_a)->content > (*stack_a)->next->content)
-	{
-		swap(stack_b, 97);
-		(*big)--;
-		index = check_index(stack_b, *big);
-	}
-	else if (check_index(stack_b, (*big)) == 0)
+	if (index == 2 && (check_index(stack_b, ((*big) - 1)) == 0))
 	{
 		m_push(stack_b, stack_a, 0);
 		(*big)--;
+		rotacao(stack_b, 98);
+		m_push(stack_b, stack_a, 0);
+		(*big)--;
+		swap(stack_a, 98);
+		index = check_index(stack_b, (*big));
+	}
+	else if ((check_index(stack_b, ((*big) - 1)) == 0))
+	{
+		m_push(stack_b, stack_a, 0);
 		index = check_index(stack_b, (*big));
 	}
 	else
@@ -68,28 +71,26 @@ int	put_in_a_2(t_stack **stack_a, t_stack **stack_b, int *big, int index)
 
 int	para_a(t_stack **stack_a, t_stack **stack_b, int *big, int index)
 {
-	//print_index(stack_b);
-	if (index == 1 && (check_index(stack_b, (*big) - 1)) == 0)
+
+	if ((*stack_a) && (*stack_a)->next && (*stack_a)->content > (*stack_a)->next->content)
+	{
+		swap(stack_a, 97);
+		(*big)--;
+		index = check_index(stack_b, *big);
+	}
+	else if (check_index(stack_b, (*big)) == 0)
+	{
+		m_push(stack_b, stack_a, 0);
+		(*big)--;
+		index = check_index(stack_b, (*big));
+	}
+	else if (index == 1 && (check_index(stack_b, (*big) - 1)) == 0)
 	{
 		swap(stack_b, 98);
 		index = check_index(stack_b, (*big));
 	}
-	else if ((check_index(stack_b, ((*big) - 1)) == 0))
-	{
-		m_push(stack_b, stack_a, 0);
-		index = check_index(stack_b, (*big));
-	}
-	else if (index == 2 && (check_index(stack_b, ((*big) - 1)) == 0))
-	{
-		m_push(stack_b, stack_a, 0);
-		(*big)--;
-		rotacao(stack_b, 98);
-		m_push(stack_b, stack_a, 0);
-		(*big)--;
-		swap(stack_b, 98);
-		index = check_index(stack_b, (*big));
-	}
-	index = put_in_a_2(stack_a, stack_b, big, index);
+	else
+		index = put_in_a_2(stack_a, stack_b, big, index);
 	return (index);
 }
 
@@ -102,9 +103,7 @@ void	alg_100(t_stack **stack_a, t_stack **stack_b)
 	big = big_index(stack_b);
 	index = check_index(stack_b, big);
 	while ((*stack_b) != NULL && index == check_index(stack_b, big))
-	{
 		index = para_a(stack_a, stack_b, &big, index);
-	}
 	if ((*stack_b) == NULL && (*stack_a)->content > (*stack_a)->next->content)
 		swap(stack_a, 97);
 }

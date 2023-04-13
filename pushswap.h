@@ -6,7 +6,7 @@
 /*   By: gmorais- <gmorais-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 11:15:34 by gmorais-          #+#    #+#             */
-/*   Updated: 2023/04/10 16:22:49 by gmorais-         ###   ########.fr       */
+/*   Updated: 2023/04/12 16:47:50 by gmorais-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,10 +49,9 @@ void	alg_100(t_stack **stack_a, t_stack **stack_b);
 
 // operacoes
 void	swap(t_stack **stack, int id);
+void	m_ss(t_stack **a, t_stack **b, int i);
 void	rotacao(t_stack **stack, int id);
 void	rev_rotacao(t_stack **stack, int id);
-//void	push_a(t_stack **stack_b, t_stack **stack_a);
-//void	push_b(t_stack **stack_a, t_stack **stack_b);
 void	m_push(t_stack **src, t_stack **dest, int i);
 
 // plano b
