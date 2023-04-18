@@ -6,7 +6,7 @@
 /*   By: gmorais- <gmorais-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 15:37:26 by gmorais-          #+#    #+#             */
-/*   Updated: 2023/04/18 14:51:42 by gmorais-         ###   ########.fr       */
+/*   Updated: 2023/04/18 14:57:42 by gmorais-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,15 +32,15 @@ int	check_lugar(t_stack **b, int big, int size)
 
 void	sort_a(t_stack **stack_a, t_stack **stack_b)
 {
-    while ((*stack_b))
+	while ((*stack_b))
 	{
-        if (!(stack_b))
+		if (!(stack_b))
 			break ;
-        if ((*stack_b)->index != big_index(stack_b))
-			&& !check_lugar(stack_b, big_index(stack_b), ft_lstsize(*stack_b))
+		if ((*stack_b)->index != big_index(stack_b)
+			&& !check_lugar(stack_b, big_index(stack_b), ft_lstsize(*stack_b)))
             rotacao(stack_b, 98);
         else if ((*stack_b)->index) != big_index(stack_b)
-            && check_lugar(stack_b, big_index(stack_a), ft_listsize(*stack_a))
+		&& check_lugar(stack_b, big_index(stack_a), ft_listsize(*stack_a))
             rev_rotacao(stack_b, 98);
         else if	((*stack_b)->index == big_index(stack_b))
 			m_push(stack_b, stack_a, 97);
