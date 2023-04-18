@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   operacoes_3.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gmorais- < gmorais-@student.42lisboa.co    +#+  +:+       +#+        */
+/*   By: gmorais- <gmorais-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 11:35:31 by gmorais-          #+#    #+#             */
-/*   Updated: 2023/04/03 14:34:58 by gmorais-         ###   ########.fr       */
+/*   Updated: 2023/04/17 15:57:31 by gmorais-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,8 +59,8 @@ void	m_push(t_stack **src, t_stack **dest, int i)
 		*src = cursor_src->next;
 		cursor_dest->next = tmp;
 	}
-	if (i == 0)
+	if (i == 97)
 		ft_printf("pa\n");
-	if (i == 1)
+	if (i == 98)
 		ft_printf("pb\n");
 }

@@ -6,7 +6,7 @@
 /*   By: gmorais- <gmorais-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 11:39:04 by gmorais-          #+#    #+#             */
-/*   Updated: 2023/04/13 13:33:59 by gmorais-         ###   ########.fr       */
+/*   Updated: 2023/04/17 15:58:04 by gmorais-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	for_b(t_stack **stack_a, t_stack **stack_b, int size)
 	{
 		if ((*stack_a)->index < chunk)
 		{
-			m_push(stack_a, stack_b, 1);
+			m_push(stack_a, stack_b, 98);
 			c++;
 		}
 		else if (c == chunk)
@@ -44,17 +44,17 @@ int	put_in_a_2(t_stack **stack_a, t_stack **stack_b, int *big, int index)
 {
 	if (index == 2 && (check_index(stack_b, ((*big) - 1)) == 0))
 	{
-		m_push(stack_b, stack_a, 0);
+		m_push(stack_b, stack_a, 97);
 		(*big)--;
 		rotacao(stack_b, 98);
-		m_push(stack_b, stack_a, 0);
+		m_push(stack_b, stack_a, 97);
 		(*big)--;
 		swap(stack_a, 98);
 		index = check_index(stack_b, (*big));
 	}
 	else if ((check_index(stack_b, ((*big) - 1)) == 0))
 	{
-		m_push(stack_b, stack_a, 0);
+		m_push(stack_b, stack_a, 97);
 		index = check_index(stack_b, (*big));
 	}
 	else
@@ -76,7 +76,7 @@ int	para_a(t_stack **stack_a, t_stack **stack_b, int *big, int index)
 	}
 	else if (check_index(stack_b, (*big)) == 0)
 	{
-		m_push(stack_b, stack_a, 0);
+		m_push(stack_b, stack_a, 97);
 		(*big)--;
 		index = check_index(stack_b, (*big));
 	}

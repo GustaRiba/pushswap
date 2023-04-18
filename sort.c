@@ -6,7 +6,7 @@
 /*   By: gmorais- <gmorais-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 13:16:41 by gmorais-          #+#    #+#             */
-/*   Updated: 2023/04/13 13:37:44 by gmorais-         ###   ########.fr       */
+/*   Updated: 2023/04/17 15:25:09 by gmorais-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ int	sorted(t_stack **stack_a)
 			return (0);
 		tmp = tmp->next;
 	}
+	ft_printf("sorted\n");
 	return (1);
 }
 

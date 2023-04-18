@@ -6,7 +6,7 @@
 /*   By: gmorais- <gmorais-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 11:15:34 by gmorais-          #+#    #+#             */
-/*   Updated: 2023/04/12 16:47:50 by gmorais-         ###   ########.fr       */
+/*   Updated: 2023/04/17 15:56:58 by gmorais-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ int		sorted(t_stack **stack_a);
 void	ord3(t_stack **stack_a);
 void	alg_5(t_stack **stack_a, t_stack **stack_b);
 void	alg_100(t_stack **stack_a, t_stack **stack_b);
+void    alg_500(t_stack **stack_a, t_stack **stack_b);
 
 // operacoes
 void	swap(t_stack **stack, int id);
