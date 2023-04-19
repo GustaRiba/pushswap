@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   alg500.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gmorais- <gmorais-@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: gmorais- < gmorais-@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 15:37:26 by gmorais-          #+#    #+#             */
-/*   Updated: 2023/04/18 14:57:42 by gmorais-         ###   ########.fr       */
+/*   Updated: 2023/04/18 15:33:59 by gmorais-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,8 @@ void	sort_a(t_stack **stack_a, t_stack **stack_b)
 		if ((*stack_b)->index != big_index(stack_b)
 			&& !check_lugar(stack_b, big_index(stack_b), ft_lstsize(*stack_b)))
             rotacao(stack_b, 98);
-        else if ((*stack_b)->index) != big_index(stack_b)
-		&& check_lugar(stack_b, big_index(stack_a), ft_listsize(*stack_a))
+        else if ((*stack_b)->index != big_index(stack_b)
+		    && check_lugar(stack_b, big_index(stack_a), ft_lstsize(*stack_a)))
             rev_rotacao(stack_b, 98);
         else if	((*stack_b)->index == big_index(stack_b))
 			m_push(stack_b, stack_a, 97);
@@ -62,10 +62,10 @@ void    alg_500(t_stack **stack_a, t_stack **stack_b)
         }
         else if ((*stack_a)->index <= i + 30)
         {
-            m_push(stack_a, stack_b, 97)
+            m_push(stack_a, stack_b, 97);
             i++;
         }
-        else ((*stack_a)->index >= i)
+        else if ((*stack_a)->index >= i)
             rotacao(stack_a, 97);
     }
     sort_a(stack_a, stack_b);

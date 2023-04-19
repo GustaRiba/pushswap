@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gmorais- <gmorais-@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: gmorais- < gmorais-@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 11:44:57 by gmorais-          #+#    #+#             */
-/*   Updated: 2023/04/18 14:22:04 by gmorais-         ###   ########.fr       */
+/*   Updated: 2023/04/18 15:35:11 by gmorais-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	call_case(t_stack **a, t_stack **b)
 		alg_5(a, b);
 	if (size == 5)
 		alg_5(a, b);
-	if (size > 5 && size < 499)
+	if (size > 5 && size < 501)
 	{
 		get_index(a);
 		alg_100(a, b);
