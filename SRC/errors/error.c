@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   error.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gmorais- < gmorais-@student.42lisboa.co    +#+  +:+       +#+        */
+/*   By: gmorais- <gmorais-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 16:33:04 by gmorais-          #+#    #+#             */
-/*   Updated: 2023/04/22 13:08:00 by gmorais-         ###   ########.fr       */
+/*   Updated: 2023/04/24 14:25:46 by gmorais-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,32 +53,31 @@ int	duplicadas(int ac, char **av)
 	return (0);
 }
 
-int	negativo(int argc, char **argv)
+int	negativo(int ac, char **av)
 {
 	int	i;
 	int	j;
 
 	i = 1;
-	while (i < argc)
+	while (i < ac)
 	{
 		j = 0;
-		if (argv[i][0] == '-')
+		if (av[i][j] == '-')
 		{
-			j++;
-			if (!ft_isdigit(argv[i][j]) || argv[i][j] == '0')
-				exit(write(2, "Error\n", 6));
+			j += 1;
+			if (!(av[i][j] >= '0' && av[i][j] <= '9'))
+				return (1);
 		}
-		while (argv[i][j])
+		while (av[i][j])
 		{
-			if (!(ft_isdigit(argv[i][j])))
+			if (!(ft_isdigit(av[i][j])))
 				exit(write(2, "Error\n", 6));
 			j++;
 		}
 		i++;
 	}
-	return (1);
+	return (0);
 }
-
 
 int	erro_limit(int ac, char	**av)
 {

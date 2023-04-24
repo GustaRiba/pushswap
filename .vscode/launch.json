@@ -8,7 +8,7 @@
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/push_swap",
+            "program": "${workspaceFolder}/pushswap",
             "args": [675, 426, 542, 715, 709, 671, 768, 701, 147],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",

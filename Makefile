@@ -3,20 +3,20 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: gmorais- < gmorais-@student.42lisboa.co    +#+  +:+       +#+         #
+#    By: gmorais- <gmorais-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/24 14:02:40 by gmorais-          #+#    #+#              #
-#    Updated: 2023/04/22 14:33:24 by gmorais-         ###   ########.fr        #
+#    Updated: 2023/04/24 16:03:04 by gmorais-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = pushswap
+NAME = push_swap
 
-SRC	= SRC/lists/list_drenas.c \
+SRCS		= SRC/lists/list_drenas.c \
 		SRC/lists/list_drenas_2.c \
-		SRC/moves/operações_1.c \
-		SRC/moves/operações_2.c \
-		SRC/moves/operações_3.c \
+		SRC/moves/operacoes_1.c \
+		SRC/moves/operacoes_2.c \
+		SRC/moves/operacoes_3.c \
 		SRC/algori/sort.c \
 		SRC/algori/alg100.c \
 		SRC/algori/alg500.c \
@@ -40,7 +40,7 @@ all: ${NAME}
 
 ${NAME}: ${OBJS}
 		make -C ${FT_PRINTF_PATH}
-		@${CC} ${CFLAGS} ${OBJS} ${FT_PRINTF} -o ${NAME}
+		${CC} ${CFLAGS} ${OBJS} ${FT_PRINTF} -o ${NAME}
 
 dg:
 		@${CC} -Wall -Werror -Wextra -g  ${SRCS} -o ${NAME}
