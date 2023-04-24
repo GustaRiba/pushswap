@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   alg100.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gmorais- <gmorais-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gmorais- < gmorais-@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 11:39:04 by gmorais-          #+#    #+#             */
-/*   Updated: 2023/04/17 15:58:04 by gmorais-         ###   ########.fr       */
+/*   Updated: 2023/04/22 13:07:52 by gmorais-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "pushswap.h"
+#include "../../pushswap.h"
 
 void	for_b(t_stack **stack_a, t_stack **stack_b, int size)
 {

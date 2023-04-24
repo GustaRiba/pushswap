@@ -6,11 +6,11 @@
 /*   By: gmorais- < gmorais-@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 14:31:00 by gmorais-          #+#    #+#             */
-/*   Updated: 2023/04/03 14:32:13 by gmorais-         ###   ########.fr       */
+/*   Updated: 2023/04/22 13:08:07 by gmorais-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "pushswap.h"
+#include "../../pushswap.h"
 
 t_stack	*inicio_list(int ac, char **av)
 {

@@ -6,11 +6,11 @@
 /*   By: gmorais- < gmorais-@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 11:56:15 by gmorais-          #+#    #+#             */
-/*   Updated: 2023/04/06 14:49:32 by gmorais-         ###   ########.fr       */
+/*   Updated: 2023/04/22 13:08:37 by gmorais-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "pushswap.h"
+#include "../../pushswap.h"
 
 int	big_num(t_stack *stack)
 {

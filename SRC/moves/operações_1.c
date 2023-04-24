@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   operações_1.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gmorais- <gmorais-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gmorais- < gmorais-@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 11:59:31 by gmorais-          #+#    #+#             */
-/*   Updated: 2023/04/12 16:40:41 by gmorais-         ###   ########.fr       */
+/*   Updated: 2023/04/22 13:08:14 by gmorais-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "pushswap.h"
+#include "../../pushswap.h"
 
 /* sa e sb */
 void	swap(t_stack **s, int i)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   pushswap.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gmorais- <gmorais-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gmorais- < gmorais-@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 11:15:34 by gmorais-          #+#    #+#             */
-/*   Updated: 2023/04/17 15:56:58 by gmorais-         ###   ########.fr       */
+/*   Updated: 2023/04/22 13:12:18 by gmorais-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,5 +69,6 @@ int			check_index(t_stack **stack_a, int i);
 int			segunda_part(t_stack **stack_a, t_stack **stack_b, int index, int *big);
 void		print_index(t_stack **stack);
 long long	ft_atoi(const char *str);
+int			ft_isdigit(int c);
 
 #endif

@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   sort.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gmorais- <gmorais-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gmorais- < gmorais-@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 13:16:41 by gmorais-          #+#    #+#             */
-/*   Updated: 2023/04/17 15:25:09 by gmorais-         ###   ########.fr       */
+/*   Updated: 2023/04/22 13:07:56 by gmorais-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "pushswap.h"
+#include "../../pushswap.h"
 
 int	sorted(t_stack **stack_a)
 {
@@ -24,6 +24,7 @@ int	sorted(t_stack **stack_a)
 		tmp = tmp->next;
 	}
 	ft_printf("sorted\n");
+	print_list(stack_a);
 	return (1);
 }
 

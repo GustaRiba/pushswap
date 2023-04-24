@@ -6,11 +6,11 @@
 /*   By: gmorais- < gmorais-@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 15:37:26 by gmorais-          #+#    #+#             */
-/*   Updated: 2023/04/18 15:33:59 by gmorais-         ###   ########.fr       */
+/*   Updated: 2023/04/22 13:07:38 by gmorais-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "pushswap.h"
+#include "../../pushswap.h"
 
 int	check_lugar(t_stack **b, int big, int size)
 {

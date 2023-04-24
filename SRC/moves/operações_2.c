@@ -6,11 +6,11 @@
 /*   By: gmorais- < gmorais-@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 14:54:35 by gmorais-          #+#    #+#             */
-/*   Updated: 2023/02/15 13:41:48 by gmorais-         ###   ########.fr       */
+/*   Updated: 2023/04/22 13:08:17 by gmorais-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "pushswap.h"
+#include "../../pushswap.h"
 
 t_stack	*penultimo(t_stack **stack)
 {
