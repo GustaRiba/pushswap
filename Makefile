@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: gmorais- <gmorais-@student.42.fr>          +#+  +:+       +#+         #
+#    By: gmorais- <gmorais-@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/24 14:02:40 by gmorais-          #+#    #+#              #
-#    Updated: 2023/04/24 16:03:04 by gmorais-         ###   ########.fr        #
+#    Updated: 2023/04/26 19:28:07 by gmorais-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,6 @@ SRCS		= SRC/lists/list_drenas.c \
 		SRC/algori/alg100.c \
 		SRC/algori/alg500.c \
 		SRC/utils/big_sort_util.c \
-		SRC/utils/print_lista.c \
 		SRC/utils/sort_drenas.c \
 		SRC/errors/error.c \
 		SRC/errors/is_digit.c \

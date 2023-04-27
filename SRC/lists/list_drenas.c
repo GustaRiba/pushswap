@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   list_drenas.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gmorais- < gmorais-@student.42lisboa.co    +#+  +:+       +#+        */
+/*   By: gmorais- <gmorais-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 12:22:49 by gmorais-          #+#    #+#             */
-/*   Updated: 2023/04/22 13:08:10 by gmorais-         ###   ########.fr       */
+/*   Updated: 2023/04/24 17:34:33 by gmorais-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,6 @@ void	ft_lstclear(t_stack **lst)
 	}
 	free(lst1);
 }
-
 
 t_stack	*ft_lstnew(int content)
 {

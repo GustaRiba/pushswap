@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   error.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gmorais- <gmorais-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gmorais- <gmorais-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 16:33:04 by gmorais-          #+#    #+#             */
-/*   Updated: 2023/04/24 14:25:46 by gmorais-         ###   ########.fr       */
+/*   Updated: 2023/04/27 19:05:11 by gmorais-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ int	negativo(int ac, char **av)
 		if (av[i][j] == '-')
 		{
 			j += 1;
-			if (!(av[i][j] >= '0' && av[i][j] <= '9'))
+			if (!(av[i][j] > '0' && av[i][j] <= '9'))
 				return (1);
 		}
 		while (av[i][j])

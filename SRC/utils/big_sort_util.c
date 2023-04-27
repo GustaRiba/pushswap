@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   big_sort_util.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gmorais- < gmorais-@student.42lisboa.co    +#+  +:+       +#+        */
+/*   By: gmorais- <gmorais-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 12:33:17 by gmorais-          #+#    #+#             */
-/*   Updated: 2023/04/22 13:08:24 by gmorais-         ###   ########.fr       */
+/*   Updated: 2023/04/26 19:41:31 by gmorais-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,16 +72,16 @@ int	big_index(t_stack **stack_a)
 	return (big);
 }
 
-void	ate_topo_list(t_stack **stack, int index)
+void	ate_topo_list(t_stack **stack, int index, int o)
 {
 	if (index == -1)
 		return ;
 	if (index < (ft_lstsize(*stack) / 2))
 	{
-		rotacao(stack, 98);
+		rotacao(stack, o);
 	}
 	else
 	{
-		rev_rotacao(stack, 98);
+		rev_rotacao(stack, o);
 	}
 }

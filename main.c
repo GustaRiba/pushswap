@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gmorais- <gmorais-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gmorais- <gmorais-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 11:44:57 by gmorais-          #+#    #+#             */
-/*   Updated: 2023/04/24 16:15:31 by gmorais-         ###   ########.fr       */
+/*   Updated: 2023/04/26 19:26:02 by gmorais-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,9 @@ void	call_case(t_stack **a, t_stack **b)
 		alg_5(a, b);
 	if (size == 5)
 		alg_5(a, b);
-	if (size > 5 && size < 501)
-	{
-		get_index(a);
+	if (size > 5 && size < 500)
 		alg_100(a, b);
-	}
-	if (size >= 501)
+	if (size >= 500)
 		alg_500(a, b);
 }
 
@@ -61,6 +58,7 @@ int	main(int argc, char **argv)
 		return (0);
 	}
 	put_list(&a, argc, argv);
+	get_index(&a);
 	call_case(&a, &b);
 	sorted(&a);
 	ft_lstclear(&a);

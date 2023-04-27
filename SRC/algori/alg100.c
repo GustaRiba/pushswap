@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   alg100.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gmorais- < gmorais-@student.42lisboa.co    +#+  +:+       +#+        */
+/*   By: gmorais- <gmorais-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 11:39:04 by gmorais-          #+#    #+#             */
-/*   Updated: 2023/04/22 13:07:52 by gmorais-         ###   ########.fr       */
+/*   Updated: 2023/04/27 12:36:25 by gmorais-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,45 +34,16 @@ void	for_b(t_stack **stack_a, t_stack **stack_b, int size)
 				chunk += 15;
 		}
 		else
-		{
-			ate_topo_list(stack_a, check_index(stack_a, (*stack_a)->index));
-		}
+			ate_topo_list(stack_a, check_index(stack_a, (*stack_a)->index), 97);
 	}
 }
 
 int	put_in_a_2(t_stack **stack_a, t_stack **stack_b, int *big, int index)
 {
-	if (index == 2 && (check_index(stack_b, ((*big) - 1)) == 0))
+	if (index == 1 && (check_index(stack_b, (*big) - 1)) == 0)
 	{
-		m_push(stack_b, stack_a, 97);
-		(*big)--;
-		rotacao(stack_b, 98);
-		m_push(stack_b, stack_a, 97);
-		(*big)--;
-		swap(stack_a, 98);
+		swap(stack_b, 98);
 		index = check_index(stack_b, (*big));
-	}
-	else if ((check_index(stack_b, ((*big) - 1)) == 0))
-	{
-		m_push(stack_b, stack_a, 97);
-		index = check_index(stack_b, (*big));
-	}
-	else
-	{
-		ate_topo_list(stack_b, index);
-		index = check_index(stack_b, (*big));
-	}
-	return (index);
-}
-
-int	para_a(t_stack **stack_a, t_stack **stack_b, int *big, int index)
-{
-
-	if ((*stack_a) && (*stack_a)->next && (*stack_a)->content > (*stack_a)->next->content)
-	{
-		swap(stack_a, 97);
-		(*big)--;
-		index = check_index(stack_b, *big);
 	}
 	else if (check_index(stack_b, (*big)) == 0)
 	{
@@ -80,13 +51,39 @@ int	para_a(t_stack **stack_a, t_stack **stack_b, int *big, int index)
 		(*big)--;
 		index = check_index(stack_b, (*big));
 	}
-	else if (index == 1 && (check_index(stack_b, (*big) - 1)) == 0)
+	else
 	{
-		swap(stack_b, 98);
+		ate_topo_list(stack_b, index, 98);
 		index = check_index(stack_b, (*big));
 	}
-	else
-		index = put_in_a_2(stack_a, stack_b, big, index);
+	return (index);
+}
+
+int	para_a(t_stack **stack_a, t_stack **stack_b, int *big, int index)
+{
+	if ((*stack_a) && (*stack_a)->next
+		&& (*stack_a)->content > (*stack_a)->next->content)
+	{
+		swap(stack_a, 97);
+		(*big)--;
+		index = check_index(stack_b, *big);
+	}
+	else if ((check_index(stack_b, ((*big) - 1)) == 0))
+	{
+		m_push(stack_b, stack_a, 97);
+		index = check_index(stack_b, (*big));
+	}
+	else if (index == 2 && (check_index(stack_b, ((*big) - 1)) == 0))
+	{
+		m_push(stack_b, stack_a, 97);
+		(*big)--;
+		rotacao(stack_b, 98);
+		m_push(stack_b, stack_a, 97);
+		(*big)--;
+		swap(stack_a, 97);
+		index = check_index(stack_b, (*big));
+	}
+	index = put_in_a_2(stack_a, stack_b, big, index);
 	return (index);
 }
 

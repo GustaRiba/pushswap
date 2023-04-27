@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_drenas.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gmorais- < gmorais-@student.42lisboa.co    +#+  +:+       +#+        */
+/*   By: gmorais- <gmorais-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 11:56:15 by gmorais-          #+#    #+#             */
-/*   Updated: 2023/04/22 13:08:37 by gmorais-         ###   ########.fr       */
+/*   Updated: 2023/04/27 16:09:26 by gmorais-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,11 @@ int	big_num(t_stack *stack)
 {
 	int	big;
 
-	big = stack->content;
+	big = stack->index;
 	while (stack)
 	{
-		if (stack->content > big)
-			big = stack->content;
+		if (stack->index > big)
+			big = stack->index;
 		stack = stack->next;
 	}
 	return (big);
@@ -72,7 +72,7 @@ void	check_pos(t_stack **stack_a, t_stack **stack_b, int c, int i)
 			c--;
 		}
 	}
-	m_push(stack_a, stack_b, 1);
+	m_push(stack_a, stack_b, 98);
 }
 
 long long	ft_atoi(const char *str)

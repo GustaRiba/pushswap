@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gmorais- <gmorais-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gmorais- <gmorais-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 13:16:41 by gmorais-          #+#    #+#             */
-/*   Updated: 2023/04/24 14:05:12 by gmorais-         ###   ########.fr       */
+/*   Updated: 2023/04/27 15:48:02 by gmorais-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,17 @@ int	sorted(t_stack **stack_a)
 
 void	ord3(t_stack **stack_a)
 {
-	int	big;
+	int		big;
+	t_stack	*stack;
 
-	big = big_num(*stack_a);
+	stack = *stack_a;
+	big = stack->content;
+	while (stack)
+	{
+		if (stack->content > big)
+			big = stack->content;
+		stack = stack->next;
+	}
 	if ((*stack_a)->content == big)
 		rotacao(stack_a, 97);
 	else if ((*stack_a)->next->content == big)
@@ -57,5 +65,5 @@ void	alg_5(t_stack **stack_a, t_stack **stack_b)
 	if (!(sorted(stack_a)))
 		ord3(stack_a);
 	while (*stack_b)
-		m_push(stack_b, stack_a, 0);
+		m_push(stack_b, stack_a, 97);
 }
