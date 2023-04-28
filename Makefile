@@ -6,7 +6,7 @@
 #    By: gmorais- <gmorais-@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/24 14:02:40 by gmorais-          #+#    #+#              #
-#    Updated: 2023/04/26 19:28:07 by gmorais-         ###   ########.fr        #
+#    Updated: 2023/04/28 13:25:32 by gmorais-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,7 @@ OBJS	=	${SRCS:.c=.o}
 FT_PRINTF = ./ft_printf/libftprintf.a
 FT_PRINTF_PATH = ./ft_printf
 
-CC		= gcc
+CC		= cc
 CFLAGS	= -Wall -Wextra -Werror -g -fsanitize=address
 
 all: ${NAME}

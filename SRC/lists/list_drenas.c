@@ -6,7 +6,7 @@
 /*   By: gmorais- <gmorais-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 12:22:49 by gmorais-          #+#    #+#             */
-/*   Updated: 2023/04/24 17:34:33 by gmorais-         ###   ########.fr       */
+/*   Updated: 2023/04/28 13:32:03 by gmorais-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,15 +34,6 @@ void	ft_lstadd_back(t_stack **lst, t_stack *new_node)
 		last_node = ft_lstlast(*lst);
 		last_node->next = new_node;
 	}
-}
-
-int	ft_lstadd_front(t_stack **lst, t_stack *new_node)
-{
-	if (!lst || !new_node)
-		return (0);
-	new_node->next = *lst;
-	*lst = new_node;
-	return (1);
 }
 
 void	ft_lstclear(t_stack **lst)

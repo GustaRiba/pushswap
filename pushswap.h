@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   pushswap.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gmorais- <gmorais-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gmorais- <gmorais-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 11:15:34 by gmorais-          #+#    #+#             */
-/*   Updated: 2023/04/26 19:43:03 by gmorais-         ###   ########.fr       */
+/*   Updated: 2023/04/28 13:32:09 by gmorais-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,12 +33,10 @@ typedef struct s_stack
 
 t_stack		*ft_lstlast(t_stack *lst);
 void		ft_lstadd_back(t_stack **lst, t_stack *new_node);
-int			check_geral(int ac, char **av);
 t_stack		*ft_lstnew(int content);
 void		ate_topo_list(t_stack **stack_b, int index, int o);
 int			ft_lstsize(t_stack *lst);
 void		ft_lstclear(t_stack **lst);
-int			ft_lstadd_front(t_stack **lst, t_stack *new_node);
 t_stack		*inicio_list(int ac, char **av);
 
 // sort
@@ -55,17 +53,16 @@ void		rotacao(t_stack **stack, int id);
 void		rev_rotacao(t_stack **stack, int id);
 void		m_push(t_stack **src, t_stack **dest, int i);
 
-// plano b
+// utils
 t_stack		*ultimo_da_lista(t_stack *stack);
 int			big_num(t_stack *stack);
 int			small_num(t_stack **stack);
 void		check_pos(t_stack **stack_a, t_stack **stack_b, int c, int i);
-
-// utils
 void		get_index(t_stack **stack_a);
 int			big_index(t_stack **stack_a);
 int			check_index(t_stack **stack_a, int i);
 long long	ft_atoi(const char *str);
 int			ft_isdigit(int c);
+int			check_geral(int ac, char **av);
 
 #endif
