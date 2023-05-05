@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gmorais- <gmorais-@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: gmorais- < gmorais-@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 13:16:41 by gmorais-          #+#    #+#             */
-/*   Updated: 2023/04/27 15:48:02 by gmorais-         ###   ########.fr       */
+/*   Updated: 2023/05/05 11:45:37 by gmorais-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ int	sorted(t_stack **stack_a)
 			return (0);
 		tmp = tmp->next;
 	}
-	ft_printf("sorted\n");
 	return (1);
 }
 

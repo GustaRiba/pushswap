@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gmorais- <gmorais-@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: gmorais- < gmorais-@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 11:44:57 by gmorais-          #+#    #+#             */
-/*   Updated: 2023/04/26 19:26:02 by gmorais-         ###   ########.fr       */
+/*   Updated: 2023/05/05 11:44:40 by gmorais-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,7 @@ void	call_case(t_stack **a, t_stack **b)
 	if (sorted(a))
 		return ;
 	if (size == 2)
-	{
 		swap(a, 'a');
-		sorted(a);
-	}
 	if (size == 3)
 		ord3(a);
 	if (size == 4)
@@ -52,6 +49,8 @@ int	main(int argc, char **argv)
 
 	a = NULL;
 	b = NULL;
+	if (argc < 3)
+		return (0);
 	if (check_geral(argc, argv) == 1)
 	{
 		ft_printf("error\n");
@@ -60,7 +59,7 @@ int	main(int argc, char **argv)
 	put_list(&a, argc, argv);
 	get_index(&a);
 	call_case(&a, &b);
-	sorted(&a);
+	//sorted(&a);
 	ft_lstclear(&a);
 	ft_lstclear(&b);
 }
